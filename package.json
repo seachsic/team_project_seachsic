@@ -1,11 +1,11 @@
 {
-  "name": "parcel-project-template",
+  "name": "customer-rewiews-seachsic",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://ilcommitfa.github.io/team-project",
+  "homepage": "https://seachsic.github.io/team_project_seachsic",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /team-project/"
+    "build": "parcel build src/*.html --public-url /team_project_seachsic/"
   },
   "repository": {
     "type": "git",

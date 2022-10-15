@@ -1,0 +1,321 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.example {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #2f2f37;
+  max-width: 960px;
+  padding: 16px;
+}
+
+.example code {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ff6b0a;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.example .background {
+  height: 240px;
+  background-image: url("../images/logo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__list {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery__item {
+  visibility: hidden;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  -webkit-animation: 12s autoplay infinite;
+          animation: 12s autoplay infinite;
+}
+.gallery__item:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.gallery__item:nth-child(2) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.gallery__item:nth-child(3) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+@media screen and (min-width: 768px) {
+  .gallery__item {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+}
+
+.gallery__img {
+  width: 279px;
+  height: 130px;
+  border-radius: 7px;
+}
+@media screen and (min-width: 768px) {
+  .gallery__img {
+    border-radius: 18px;
+    width: 704px;
+    height: 327px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__img {
+    border-radius: 24px;
+    width: 1013px;
+    height: 422px;
+  }
+}
+
+@-webkit-keyframes autoplay {
+  0% {
+    visibility: visible;
+  }
+  33.33% {
+    visibility: hidden;
+  }
+}
+
+@keyframes autoplay {
+  0% {
+    visibility: visible;
+  }
+  33.33% {
+    visibility: hidden;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #444;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.review {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.review__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 6px solid #ccc;
+  outline-offset: -6px;
+  box-shadow: 0 0 0 0 #d9d9d9, 0 0 0 0 #84a178;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.review__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+          animation: check 0.4s linear forwards;
+  color: #84a178;
+  background-color: #84a178;
+}
+
+.review__nav:checked:nth-of-type(1) ~ .review__inner {
+  left: 0%;
+}
+
+.review__nav:checked:nth-of-type(2) ~ .review__inner {
+  left: -100%;
+}
+
+.review__nav:checked:nth-of-type(3) ~ .review__inner {
+  left: -200%;
+}
+
+.review__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  transition: left 0.4s;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.review__contents {
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.review__image {
+  font-size: 2.7rem;
+  color: #2196f3;
+}
+
+.review__caption {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 186%;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.review__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 255%;
+  background-color: #84a178;
+  color: #fcfcfc;
+  border-radius: 10px;
+  padding: 34px 39px;
+  margin-top: 32px;
+  margin-bottom: 30px;
+}
+
+@-webkit-keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+@keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+:root {
+  /* color */
+  --primary-text-color: #131313;
+  --secondary-text-color: #FCFCFC;
+  --accent-color: #F8D24E;
+  --primary-bg-color: #84A178;
+  --secondary-bg-color: #F5F5F5;
+  --products-color1: #AEC6A5;
+  --products-color2: #EFD478;
+  --products-color3: #D6936D;
+  /* font */
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Seymour One", sans-serif;
+  --additional-font: "Roboto", sans-serif;
+  /* animation */
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}/*# sourceMappingURL=index.css.map */
